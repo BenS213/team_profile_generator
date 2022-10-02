@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color: navy;
+    color: white;
+    padding: 2rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    min-width: 100px;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.head {
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.body {
+    padding: 10px;
+}
+
+.info {
+    background-color: gray;
+    color: white;
+    margin: 8px 0;
+    padding: 5px;
+    border-radius: 2px;
+}
+
