@@ -1,0 +1,27 @@
+{
+  "name": "team_profile_generator",
+  "version": "1.0.0",
+  "description": "generates a team profile",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenS213/team_profile_generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenS213/team_profile_generator/issues"
+  },
+  "homepage": "https://github.com/BenS213/team_profile_generator#readme",
+  "dependencies": {
+    "inquirer": "^9.1.2",
+    "jest": "^29.1.2"
+  }
+}
