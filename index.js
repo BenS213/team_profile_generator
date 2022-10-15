@@ -2,6 +2,8 @@ const inquirer = require("inquirer")
 const fs = require("fs");
 const path = require("path");
 
+
+const generateTeam = require("./src/generateHTML");
 const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -16,7 +18,7 @@ function run () {
       type: "list",
       message: "Employee type?",
       name: "addEmployeePrompt",
-      choices: ["Manager", "Engineer", "Intern", "No more team members are needed."]
+      choices: ["Manager", "Engineer", "Intern", "Finished"]
     }]).then(function (input) {
       switch(input.addEmployeePrompt) {
         case "Manager":
@@ -28,13 +30,11 @@ function run () {
         case "Intern":
           addIntern();
           break;
-
         default:
           writeHTML();
       }
     })
   }
-// OOP Functions
 
 function addManager() {
   inquirer.prompt ([
@@ -71,7 +71,6 @@ function addManager() {
 
 }
 
-
 function addEngineer() {
     inquirer.prompt([
       
@@ -104,7 +103,6 @@ function addEngineer() {
       teamArray.push(engineer);
       createTeam();
     });
-
   }
 
   function addIntern() {
@@ -144,7 +142,7 @@ function addEngineer() {
 
 function writeHTML () {
     console.log("Success!")
-    fs.writeFile(outputPath, generateTeam(teamArray), "UTF-8")
+    fs.writeFileSync('./output/index.html', generateTeam(teamArray), "UTF-8")
 }
 
 createTeam();
