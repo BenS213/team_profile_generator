@@ -17,7 +17,7 @@ header {
     justify-content: center;
 }
 .card {
-    min-width: 100px;
+    min-width: 300px;
     background-color: lightgray;
     border-radius: 5px;
     margin: 1rem;
